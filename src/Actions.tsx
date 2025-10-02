@@ -785,84 +785,75 @@ export const ActionsPage: React.FC<ActionsPageProps> = ({
 
       <br></br>
       
-      {/* Enhanced GitHub & Website Section */}
+      {/* JewLiquid Perp Trading Link */}
       <div className="mb-4 mx-auto max-w-4xl">
-        <div className="bg-gradient-to-br from-app-secondary-50 to-app-primary-dark-50 backdrop-blur-sm 
-                     rounded-xl p-4 relative overflow-hidden border border-app-primary-10 
-                     hover-border-primary-30 transition-all duration-300">
-          
-          {/* Header */}
-          <div className="flex items-center mb-3">
-            <svg 
-              viewBox="0 0 24 24" 
-              width="20" 
-              height="20" 
-              className="color-primary mr-2"
-            >
-              <path
-                fill="currentColor"
-                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.934.359.31.678.92.678 1.855 0 1.337-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"
-              />
-            </svg>
-            <span className="text-sm font-mono tracking-wider text-app-secondary font-semibold">
-              OPEN SOURCE PROJECT
-            </span>
-          </div>
-          
-          {/* Description */}
-          <p className="text-xs text-app-secondary-80 mb-4 leading-relaxed">
-            Built with transparency in mind. Explore the code, contribute, or fork for your own use.
-          </p>
-          
-          {/* Links */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            {/* Main Website Link */}
-            <a 
-              href={`https://${brand.domain}`} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center py-2 px-4 rounded-lg bg-gradient-to-r 
-                         from-app-primary-color to-primary-90 text-black font-mono text-xs font-semibold
-                         hover-from-primary-90 hover-to-app-primary-color 
-                         transition-all duration-300 transform hover:scale-105"
-            >
-              <svg 
-                viewBox="0 0 24 24" 
-                width="16" 
-                height="16" 
-                className="mr-2"
-                fill="currentColor"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-              {brand.displayName}
-            </a>
+        <a 
+          href="https://jewliquid.fun/perp/PERP_ASTER_USDC" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <div className="bg-gradient-to-br from-app-secondary-50 to-app-primary-dark-50 backdrop-blur-sm 
+                       rounded-xl p-6 relative overflow-hidden border border-app-primary-10 
+                       hover-border-primary-60 transition-all duration-300 transform hover:scale-[1.02]
+                       cursor-pointer group">
             
-            {/* GitHub Link */}
-            <a 
-              href={brand.githubUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center py-2 px-4 rounded-lg bg-gradient-to-r 
-                         from-app-primary-20 to-app-primary-10 border border-app-primary-30
-                         hover-from-app-primary-30 hover-to-app-primary-20 
-                         transition-all duration-300 transform hover:scale-105"
-            >
-              <svg 
-                viewBox="0 0 24 24" 
-                width="16" 
-                height="16" 
-                className="mr-2 color-primary"
-                fill="currentColor"
-              >
-                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.934.359.31.678.92.678 1.855 0 1.337-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
-              </svg>
-              <span className="text-xs font-mono tracking-wider color-primary font-semibold">
-                {brand.social.twitter}
-              </span>
-            </a>
+            {/* Cyberpunk corner accents */}
+            <div className="absolute top-0 left-0 w-24 h-24 pointer-events-none">
+              <div className="absolute top-0 left-0 w-px h-8 bg-gradient-to-b from-app-primary-color to-transparent"></div>
+              <div className="absolute top-0 left-0 w-8 h-px bg-gradient-to-r from-app-primary-color to-transparent"></div>
+            </div>
+            <div className="absolute bottom-0 right-0 w-24 h-24 pointer-events-none">
+              <div className="absolute bottom-0 right-0 w-px h-8 bg-gradient-to-t from-app-primary-color to-transparent"></div>
+              <div className="absolute bottom-0 right-0 w-8 h-px bg-gradient-to-l from-app-primary-color to-transparent"></div>
+            </div>
+            
+            {/* Content */}
+            <div className="flex items-center justify-between relative z-10">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-gradient-to-br from-app-primary-20 to-app-primary-05 rounded-lg
+                               group-hover:from-app-primary-30 group-hover:to-app-primary-10 transition-all duration-300">
+                  <TrendingUp size={24} className="color-primary" />
+                </div>
+                <div>
+                  <div className="text-sm font-mono tracking-wider text-app-secondary font-semibold mb-1
+                                 group-hover:color-primary transition-colors duration-300">
+                    TRADE PERPETUALS
+                  </div>
+                  <div className="text-xs text-app-secondary-60 font-mono">
+                    Visit JewLiquid Perp Exchange
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono color-primary opacity-0 group-hover:opacity-100 
+                               transition-opacity duration-300">
+                  CLICK TO TRADE
+                </span>
+                <svg 
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  className="color-primary transform group-hover:translate-x-1 transition-transform duration-300"
+                >
+                  <path 
+                    d="M5 12h14m-7-7l7 7-7 7" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-app-primary-05 to-transparent 
+                           opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
           </div>
-        </div>
+        </a>
       </div>
       
     </div>

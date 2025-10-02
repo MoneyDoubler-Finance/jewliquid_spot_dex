@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from './logo.png';
+import logo from './pumpjewlogofull.png';
 import { brand } from './config/brandConfig';
 
 // Tooltip Component with cyberpunk styling
@@ -168,7 +168,7 @@ const ServiceSelector = () => {
           <img 
             src={logo} 
             alt={brand.altText} 
-            className="h-8 filter drop-shadow-[0_0_8px_var(--color-primary-70)]" 
+            className="h-8 w-8 object-contain filter drop-shadow-[0_0_8px_var(--color-primary-70)]" 
           />
         </motion.div>
         </button>
@@ -212,7 +212,7 @@ const ServiceSelector = () => {
                   initial="hidden"
                   animate="show"
                 >
-                  {/* Solana */}
+                  {/* X.com (Twitter) */}
                   <motion.div
                     variants={{
                       hidden: { opacity: 0, y: 10 },
@@ -220,20 +220,18 @@ const ServiceSelector = () => {
                     }}
                   >
                     <CyberpunkServiceButton 
-                      icon={<div className="bg-[#9945FF] rounded-full w-8 h-8 flex items-center justify-center overflow-hidden">
-                        <svg viewBox="0 0 397 311" width="22" height="22">
-                          <path d="M64.6 237.9c2.4-2.4 5.7-3.8 9.2-3.8h320.3c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7z" fill="#FFFFFF"/>
-                          <path d="M64.6 3.8C67.1 1.4 70.4 0 73.8 0h320.3c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1L64.6 3.8z" fill="#FFFFFF"/>
-                          <path d="M333.1 120.1c-2.4-2.4-5.7-3.8-9.2-3.8H3.6c-5.8 0-8.7 7-4.6 11.1l62.7 62.7c2.4 2.4 5.7 3.8 9.2 3.8h320.3c5.8 0 8.7-7 4.6-11.1l-62.7-62.7z" fill="#FFFFFF"/>
+                      icon={<div className="bg-[#000000] rounded-full w-8 h-8 flex items-center justify-center overflow-hidden">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="#FFFFFF">
+                          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                         </svg>
                       </div>} 
-                      label="Launchpad" 
-                      url={brand.appUrl}
-                      description="Launchpad"
+                      label="X" 
+                      url="https://x.com/jewliquid69"
+                      description="Follow us on X"
                     />
                   </motion.div>
                   
-                  {/* Docs */}
+                  {/* Perps Trading */}
                   <motion.div
                     variants={{
                       hidden: { opacity: 0, y: 10 },
@@ -241,22 +239,19 @@ const ServiceSelector = () => {
                     }}
                   >
                     <CyberpunkServiceButton 
-                      icon={<div className="bg-[#0066FF] rounded-lg w-8 h-8 flex items-center justify-center">
-                        <svg viewBox="0 0 24 24" width="18" height="18">
-                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="#FFFFFF" stroke="#FFFFFF" strokeWidth="0.5" />
-                          <polyline points="14 2 14 8 20 8" fill="none" stroke="#FFFFFF" strokeWidth="1" />
-                          <line x1="16" y1="13" x2="8" y2="13" stroke="#FFFFFF" strokeWidth="1" />
-                          <line x1="16" y1="17" x2="8" y2="17" stroke="#FFFFFF" strokeWidth="1" />
-                          <polyline points="10 9 9 9 8 9" stroke="#FFFFFF" strokeWidth="1" />
+                      icon={<div className="bg-[#10B981] rounded-lg w-8 h-8 flex items-center justify-center">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" strokeWidth="2">
+                          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" strokeLinecap="round" strokeLinejoin="round"/>
+                          <circle cx="12" cy="12" r="1" fill="#FFFFFF"/>
                         </svg>
                       </div>} 
-                      label="Docs" 
-                      url={brand.docsUrl}
-                      description="Documentation"
+                      label="Perps" 
+                      url="https://jewliquid.fun/perp/PERP_ASTER_USDC"
+                      description="Perpetual Trading"
                     />
                   </motion.div>
                   
-                  {/* GitHub */}
+                  {/* Telegram */}
                   <motion.div
                     variants={{
                       hidden: { opacity: 0, y: 10 },
@@ -264,14 +259,14 @@ const ServiceSelector = () => {
                     }}
                   >
                     <CyberpunkServiceButton 
-                      icon={<div className="bg-[#171515] rounded-full w-8 h-8 flex items-center justify-center">
-                        <svg viewBox="0 0 24 24" width="18" height="18">
-                          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.03-1.61-4.03-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.3.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" fill="#FFFFFF" />
+                      icon={<div className="bg-[#0088CC] rounded-full w-8 h-8 flex items-center justify-center">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="#FFFFFF">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
                         </svg>
                       </div>} 
-                      label="GitHub" 
-                      url={brand.githubOrg}
-                      description="GitHub Repository"
+                      label="Telegram" 
+                      url="https://t.me/jewliquid"
+                      description="Join our Telegram"
                     />
                   </motion.div>
                 </motion.div>

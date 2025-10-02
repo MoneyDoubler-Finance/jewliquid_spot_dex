@@ -3,6 +3,7 @@ import { ChevronDown, Settings, Globe, Wifi, PanelLeftClose, PanelLeftOpen } fro
 import { Connection } from '@solana/web3.js';
 import ServiceSelector from './Menu.tsx';
 import { WalletTooltip, initStyles } from './styles/Styles.tsx';
+import tokenLogo from './pumpjewlogofull.png';
 import { 
   saveWalletsToCookies,
   loadWalletsFromCookies,
@@ -1050,6 +1051,25 @@ const WalletManager: React.FC = () => {
       {/* Top Navigation */}
       <nav className="relative border-b border-app-primary-70 px-4 py-2 backdrop-blur-sm bg-app-primary-99 z-20">
         <div className="flex items-center gap-3">
+          <WalletTooltip content="Trade This Token" position="bottom">
+            <button
+              className="p-2 border border-app-primary-40 hover-border-primary bg-app-secondary rounded cyberpunk-btn transition-all hover:scale-105"
+              onClick={() => {
+                const tokenAddress = '6bQbWiGDGfrdjNG3FBS5i3yFjpQQKroZCSBWtVkWpump';
+                memoizedCallbacks.setTokenAddress(tokenAddress);
+                showToast(`Token loaded: ${tokenAddress.slice(0, 8)}...`, "success");
+              }}
+              aria-label="Trade Token"
+              title="Trade This Token"
+            >
+              <img 
+                src={tokenLogo}
+                alt="Token Logo"
+                className="w-5 h-5 object-contain"
+              />
+            </button>
+          </WalletTooltip>
+
           <WalletTooltip content={state.leftColumnCollapsed ? "Show Wallets" : "Hide Wallets"} position="bottom">
             <button
               className="p-2 border border-app-primary-40 hover-border-primary bg-app-secondary rounded cyberpunk-btn"
@@ -1082,6 +1102,8 @@ const WalletManager: React.FC = () => {
                       memoizedCallbacks.setTokenAddress('');
                       showToast("Token address cleared", "success");
                     }}
+                    aria-label="Clear token address"
+                    title="Clear token address"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="color-primary opacity-60 hover:opacity-100 transition-opacity">
                        <polyline points="3,6 5,6 21,6"></polyline>
@@ -1106,6 +1128,8 @@ const WalletManager: React.FC = () => {
                       showToast("Failed to read from clipboard", "error");
                     }
                   }}
+                  aria-label="Paste from clipboard"
+                  title="Paste from clipboard"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="color-primary opacity-60 hover:opacity-100 transition-opacity">
                     <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
@@ -1120,6 +1144,8 @@ const WalletManager: React.FC = () => {
             <button 
               className="p-2 border border-app-primary-40 hover-border-primary bg-app-secondary rounded cyberpunk-btn"
               onClick={() => memoizedCallbacks.setIsSettingsOpen(true)}
+              aria-label="Open Settings"
+              title="Open Settings"
             >
               <Settings size={20} className="color-primary" />
             </button>

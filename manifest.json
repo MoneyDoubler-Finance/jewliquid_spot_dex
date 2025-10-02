@@ -1,10 +1,16 @@
 {
-    "name": "Fury Bundler",
-    "short_name": "Fury",
+    "name": "JewLiquid - SPOT DEX",
+    "short_name": "JewLiquid",
     "display": "standalone",
     "orientation": "portrait",
-    "theme_color": "#041726",
+    "theme_color": "#10B981",
     "background_color": "#041726",
     "start_url": "/",
-    "icons": []
+    "icons": [
+      {
+        "src": "/src/pumpjewlogofull.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
   }
