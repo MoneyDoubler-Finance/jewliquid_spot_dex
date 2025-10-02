@@ -19,11 +19,13 @@ import {
    Bot
  } from 'lucide-react';
 import { brand } from './config/brandConfig';
+import nukeIcon from './nukeee.png';
 import * as SwitchPrimitive from '@radix-ui/react-switch';
 import { WalletType, loadConfigFromCookies } from "./Utils";
 import { useToast } from "./Notifications";
 import { countActiveWallets, getScriptName } from './utils/wallets';
 import TradingCard from './TradingForm';
+import SpaceshipDestroyer from './SpaceshipDestroyer';
 
 import { executeTrade } from './utils/trading';
 
@@ -385,6 +387,9 @@ export const ActionsPage: React.FC<ActionsPageProps> = ({
   const [autoBuyEnabled, setAutoBuyEnabled] = useState(true);
   const [autoBuyAmount, setAutoBuyAmount] = useState('0.01'); // Default SOL amount for auto-buy
   const [autoRedirectEnabled, setAutoRedirectEnabled] = useState(false); // Auto redirect to token after buy
+  
+  // Spaceship Destroyer Game State
+  const [isSpaceshipGameActive, setIsSpaceshipGameActive] = useState(false);
 
 
   const handleTradeSubmit = async (wallets: WalletType[], isBuyMode: boolean, dex?: string, buyAmount?: string, sellAmount?: string, tokenAddressParam?: string) => {
@@ -864,6 +869,117 @@ export const ActionsPage: React.FC<ActionsPageProps> = ({
           </div>
         </div>
       </div>
+
+      {/* SAMSPON OPTION Button */}
+      <div className="mb-4 mx-auto max-w-4xl">
+        <button 
+          onClick={() => {
+            showToast("💥 SAMPSON OPTION ACTIVATED! 💥 Spaceship Destroyer Launched!", "success");
+            setIsSpaceshipGameActive(true);
+          }}
+          className="block w-full"
+        >
+          <div className="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm 
+                       rounded-xl p-6 relative overflow-hidden border-2 border-red-500/30 
+                       hover:border-red-400 transition-all duration-300 transform hover:scale-[1.02]
+                       cursor-pointer group animate-pulse hover:animate-none shadow-lg shadow-red-500/20
+                       hover:shadow-red-500/50">
+            
+            {/* Animated corner accents with danger theme */}
+            <div className="absolute top-0 left-0 w-32 h-32 pointer-events-none">
+              <div className="absolute top-0 left-0 w-1 h-12 bg-gradient-to-b from-red-500 to-transparent animate-pulse"></div>
+              <div className="absolute top-0 left-0 w-12 h-1 bg-gradient-to-r from-red-500 to-transparent animate-pulse"></div>
+              <div className="absolute top-2 left-2 w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
+            </div>
+            <div className="absolute bottom-0 right-0 w-32 h-32 pointer-events-none">
+              <div className="absolute bottom-0 right-0 w-1 h-12 bg-gradient-to-t from-red-500 to-transparent animate-pulse"></div>
+              <div className="absolute bottom-0 right-0 w-12 h-1 bg-gradient-to-l from-red-500 to-transparent animate-pulse"></div>
+              <div className="absolute bottom-2 right-2 w-2 h-2 bg-red-500 rounded-full animate-ping" style={{ animationDelay: '0.2s' }}></div>
+            </div>
+            
+            {/* Diagonal danger stripes background */}
+            <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300"
+                 style={{
+                   backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(239, 68, 68, 0.3) 10px, rgba(239, 68, 68, 0.3) 20px)'
+                 }}>
+            </div>
+            
+            {/* Content */}
+            <div className="flex items-center justify-between relative z-10">
+              <div className="flex items-center gap-4">
+                <div className="p-0 rounded-lg border-0 overflow-hidden flex-shrink-0 leading-none">
+                  <img 
+                    src={nukeIcon} 
+                    alt="Nuke" 
+                    className="block h-14 w-auto brightness-110 group-hover:brightness-125 transition-all duration-300
+                               group-hover:drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]" 
+                  />
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-lg leading-none select-none">⚠️</div>
+                  <div className="text-base font-mono tracking-widest text-red-400 font-bold my-1 text-center
+                                 group-hover:text-red-300 transition-colors duration-300
+                                 group-hover:animate-pulse uppercase drop-shadow-[0_0_10px_rgba(239,68,68,0.5)]">
+                    <div>SAMPSON</div>
+                    <div>OPTION</div>
+                  </div>
+                  <div className="text-lg leading-none select-none">⚠️</div>
+                  <div className="text-xs text-red-400/70 font-mono group-hover:text-red-300/90 transition-colors text-center mt-2">
+                    Nuclear-grade trading power
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono text-red-400 opacity-0 group-hover:opacity-100 
+                               transition-opacity duration-300 font-bold animate-pulse">
+                  DANGER ZONE
+                </span>
+                <svg 
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  className="text-red-400 transform group-hover:translate-x-1 group-hover:scale-110 transition-transform duration-300"
+                >
+                  <path 
+                    d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    fill="currentColor"
+                    className="group-hover:drop-shadow-[0_0_4px_rgba(239,68,68,0.8)]"
+                  />
+                </svg>
+              </div>
+            </div>
+            
+            {/* Pulsing glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-red-600/0 via-red-500/10 to-red-600/0 
+                           opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none
+                           animate-pulse"></div>
+            
+            {/* Scanning line effect */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute h-px w-full bg-gradient-to-r from-transparent via-red-500 to-transparent
+                           opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                           animate-[scan_2s_ease-in-out_infinite]"
+                   style={{
+                     animation: 'scan 2s ease-in-out infinite',
+                     top: '50%'
+                   }}>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      
+      {/* Spaceship Destroyer Game */}
+      <SpaceshipDestroyer 
+        isActive={isSpaceshipGameActive}
+        onClose={() => setIsSpaceshipGameActive(false)}
+      />
       
     </div>
   );
