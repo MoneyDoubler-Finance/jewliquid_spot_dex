@@ -477,9 +477,15 @@ export const ChartPage: React.FC<ChartPageProps> = ({
   // Render iframe with single frame
   const renderFrame = (hasToken: boolean = true) => {
     const frameTheme = brand.theme.frameName || brand.theme.name;
+    // Try to hint the embedded frame with explicit accent/primary color values.
+    // Unknown params will be ignored by the remote app, but known ones will
+    // switch the palette from grey/green to our aqua branding.
+    const accentHex = (brand as any)?.favicon?.themeColor ?? '#00d5ff';
+    const encodedAccent = encodeURIComponent(accentHex);
+    const colorQuery = `&accent=${encodedAccent}&primary=${encodedAccent}&color=${encodedAccent}&primaryColor=${encodedAccent}&palette=aqua`;
     const iframeSrc = hasToken 
-      ? `https://frame.fury.bot/?tokenMint=${tokenAddress}&theme=${frameTheme}`
-      : `https://frame.fury.bot/?theme=${frameTheme}`;
+      ? `https://frame.fury.bot/?tokenMint=${tokenAddress}&theme=${frameTheme}${colorQuery}`
+      : `https://frame.fury.bot/?theme=${frameTheme}${colorQuery}`;
     
     return (
       <div className="relative flex-1 overflow-hidden iframe-container">
@@ -502,6 +508,26 @@ export const ChartPage: React.FC<ChartPageProps> = ({
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation"
             referrerPolicy="no-referrer-when-downgrade"
           />
+          {/* Aqua tint overlays to ensure aqua appearance even if remote theme is locked */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              zIndex: 1,
+              backgroundColor: 'rgba(0, 213, 255, 0.28)',
+              mixBlendMode: 'color'
+            }}
+          />
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              zIndex: 1,
+              background:
+                'radial-gradient(120% 120% at 80% 0%, rgba(0,213,255,0.12) 0%, rgba(0,213,255,0.06) 60%, rgba(0,213,255,0) 100%)',
+              mixBlendMode: 'screen',
+              backdropFilter: 'hue-rotate(60deg) saturate(140%) brightness(1.06)',
+              WebkitBackdropFilter: 'hue-rotate(60deg) saturate(140%) brightness(1.06)'
+            }}
+          />
         </div>
       </div>
     );
@@ -518,8 +544,8 @@ export const ChartPage: React.FC<ChartPageProps> = ({
         WebkitOverflowScrolling: 'touch'
       }}
     >
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-app-secondary-80 to-transparent pointer-events-none" />
+      {/* Subtle gradient overlay, tinted aqua */}
+      <div className="absolute inset-0 bg-gradient-to-br from-app-primary-20 to-transparent pointer-events-none" />
       
 
       
