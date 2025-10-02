@@ -39,13 +39,13 @@
   background: var(--color-primary);
   border: 2px solid var(--color-bg-primary);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(2, 179, 109, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 213, 255, 0.3);
   transition: all 0.2s ease;
 }
 
 .market-cap-slider::-webkit-slider-thumb:hover {
   background: var(--color-primary-light);
-  box-shadow: 0 4px 12px rgba(2, 179, 109, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 213, 255, 0.5);
   transform: scale(1.1);
 }
 
@@ -56,13 +56,13 @@
   background: var(--color-primary);
   border: 2px solid var(--color-bg-primary);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(2, 179, 109, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 213, 255, 0.3);
   transition: all 0.2s ease;
 }
 
 .market-cap-slider::-moz-range-thumb:hover {
   background: var(--color-primary-light);
-  box-shadow: 0 4px 12px rgba(2, 179, 109, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 213, 255, 0.5);
   transform: scale(1.1);
 }
 
@@ -79,7 +79,7 @@
 }
 
 .market-cap-slider:focus {
-  box-shadow: 0 0 0 3px rgba(2, 179, 109, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 213, 255, 0.2);
 }
 
 @keyframes slideProgress {
@@ -262,7 +262,7 @@
 }
 
 .border-app-primary-70 {
-  border-color: rgba(2, 179, 109, 0.7);
+  border-color: var(--color-primary-70);
 }
 
 .border-app-primary-80 {
@@ -309,7 +309,7 @@
 }
 
 .hover-border-primary-50:hover {
-  border-color: rgba(2, 179, 109, 0.5);
+  border-color: var(--color-primary-50);
 }
 
 .hover-border-primary-60:hover {
@@ -381,7 +381,7 @@
 }
 
 .bg-primary-50 {
-  background-color: rgba(2, 179, 109, 0.5);
+  background-color: var(--color-primary-50);
 }
 
 .bg-primary-60 {
@@ -389,15 +389,15 @@
 }
 
 .bg-primary-05 {
-  background-color: rgba(2, 179, 109, 0.05);
+  background-color: var(--color-primary-05);
 }
 
 .bg-primary-08 {
-  background-color: rgba(2, 179, 109, 0.08);
+  background-color: rgba(0, 213, 255, 0.08);
 }
 
 .bg-primary-15 {
-  background-color: rgba(2, 179, 109, 0.15);
+  background-color: var(--color-primary-15);
 }
 
 .bg-app-primary-60 {
@@ -551,7 +551,7 @@
 }
 
 .border-app-primary-15 {
-  border-color: rgba(2, 179, 109, 0.15);
+  border-color: rgba(0, 213, 255, 0.15);
 }
 
 .border-app-primary-20 {
@@ -563,7 +563,7 @@
 }
 
 .border-primary-50 {
-  border-color: rgba(2, 179, 109, 0.5);
+  border-color: rgba(0, 213, 255, 0.5);
 }
 
 .border-app-primary-60 {
@@ -605,18 +605,18 @@
 
 /* Gradient utilities */
 .from-app-primary-05 {
-  --tw-gradient-from: rgba(2, 179, 109, 0.05);
-  --tw-gradient-to: rgb(2 179 109 / 0);
+  --tw-gradient-from: var(--color-primary-05);
+  --tw-gradient-to: rgb(0 213 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-app-primary-05 {
-  --tw-gradient-to: rgba(2, 179, 109, 0.05);
+  --tw-gradient-to: var(--color-primary-05);
 }
 
 .from-app-primary-20 {
   --tw-gradient-from: var(--color-primary-20);
-  --tw-gradient-to: rgb(2 179 109 / 0);
+  --tw-gradient-to: rgb(0 213 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -626,7 +626,7 @@
 
 .from-primary-20 {
   --tw-gradient-from: var(--color-primary-20);
-  --tw-gradient-to: rgb(2 179 109 / 0);
+  --tw-gradient-to: rgb(0 213 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -636,7 +636,7 @@
 
 .from-app-primary-color {
   --tw-gradient-from: var(--color-primary);
-  --tw-gradient-to: rgb(2 179 109 / 0);
+  --tw-gradient-to: rgb(0 213 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -646,12 +646,12 @@
 
 .from-app-primary-dark {
   --tw-gradient-from: var(--color-primary-dark);
-  --tw-gradient-to: rgb(1 163 95 / 0);
+  --tw-gradient-to: rgb(0 184 230 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .via-app-primary-40 {
-  --tw-gradient-to: rgb(2 179 109 / 0);
+  --tw-gradient-to: rgb(0 213 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--color-primary-40), var(--tw-gradient-to);
 }
 
@@ -660,12 +660,12 @@
 }
 
 .to-primary-90 {
-  --tw-gradient-to: rgba(2, 179, 109, 0.9);
+  --tw-gradient-to: rgba(0, 213, 255, 0.9);
 }
 
 .from-primary-90 {
-  --tw-gradient-from: rgba(2, 179, 109, 0.9);
-  --tw-gradient-to: rgb(2 179 109 / 0);
+  --tw-gradient-from: rgba(0, 213, 255, 0.9);
+  --tw-gradient-to: rgb(0 213 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -674,7 +674,7 @@
 }
 
 .hover-from-primary-90:hover {
-  --tw-gradient-from: rgba(2, 179, 109, 0.9);
+  --tw-gradient-from: rgba(0, 213, 255, 0.9);
 }
 
 .hover-shadow-app-primary-60:hover {
@@ -746,7 +746,7 @@
 
 /* Special glow shadow */
 .shadow-glow-primary {
-  box-shadow: 0 0 10px rgba(2, 179, 109, 0.3);
+  box-shadow: 0 0 10px rgba(0, 213, 255, 0.3);
 }
 
 /* Disabled states */
