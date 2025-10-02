@@ -676,80 +676,9 @@ export const ActionsPage: React.FC<ActionsPageProps> = ({
           </div>
         )}
         
-        {/* Token Operations */}
-        <div className="space-y-4">          
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 relative z-10">
-              {/* AUTOMATE Button */}
-              <button
-                onClick={() => {
-                  if (!tokenAddress) {
-                    showToast("Please select a token first", "error");
-                    return;
-                  }
-                  setAutomateCardOpen(true);
-                }}
-                className="flex flex-col items-center gap-2 p-3 rounded-lg
-                          bg-gradient-to-br from-app-secondary-80 to-app-primary-dark-50 border border-app-primary-30 hover-border-primary-60
-                          transition-all duration-300"
-              >
-                <div className="p-3 bg-gradient-to-br from-app-primary-20 to-app-primary-05 rounded-lg">
-                  <Bot size={20} className="color-primary" />
-                </div>
-                <span className="text-xs font-mono tracking-wider text-app-secondary uppercase">AUTOMATE</span>
-              </button>
-              
-              {/* Deploy Button */}
-              <button
-                onClick={() => setDeployModalOpen(true)}
-                className="flex flex-col items-center gap-2 p-3 rounded-lg
-                          bg-gradient-to-br from-app-secondary-80 to-app-primary-dark-50 border border-app-primary-30 hover-border-primary-60
-                          transition-all duration-300"
-              >
-                <div className="p-3 bg-gradient-to-br from-app-primary-20 to-app-primary-05 rounded-lg">
-                  <Blocks size={20} className="color-primary" />
-                </div>
-                <span className="text-xs font-mono tracking-wider text-app-secondary uppercase">Deploy</span>
-              </button>
-              
-              {/* Burn Button */}
-              <button
-                onClick={() => {
-                  if (!tokenAddress) {
-                    showToast("Please select a token first", "error");
-                    return;
-                  }
-                  setBurnModalOpen(true);
-                }}
-                className="flex flex-col items-center gap-2 p-3 rounded-lg
-                          bg-gradient-to-br from-app-secondary-80 to-app-primary-dark-50 border border-app-primary-30 hover-border-primary-60
-                          transition-all duration-300"
-              >
-                <div className="p-3 bg-gradient-to-br from-app-primary-20 to-app-primary-05 rounded-lg">
-                  <Trash2 size={20} className="color-primary" />
-                </div>
-                <span className="text-xs font-mono tracking-wider text-app-secondary uppercase">Burn</span>
-              </button>
-              
-              {/* Stagger Button */}
-              <button
-                onClick={() => {
-                  if (!tokenAddress) {
-                    showToast("Please select a token first", "error");
-                    return;
-                  }
-                  setCustomBuyModalOpen(true);
-                }}
-                className="flex flex-col items-center gap-2 p-3 rounded-lg
-                          bg-gradient-to-br from-app-secondary-80 to-app-primary-dark-50 border border-app-primary-30 hover-border-primary-60
-                          transition-all duration-300"
-              >
-                <div className="p-3 bg-gradient-to-br from-app-primary-20 to-app-primary-05 rounded-lg">
-                  <Workflow size={20} className="color-primary" />
-                </div>
-                <span className="text-xs font-mono tracking-wider text-app-secondary uppercase">Stagger</span>
-              </button>
-          </div>
-          
+        {/* Token Operations - removed per request */}
+        <div className="space-y-4">
+          {/* Buttons removed: AUTOMATE, Deploy, Burn, Stagger */}
           {/* Live Data Section */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
