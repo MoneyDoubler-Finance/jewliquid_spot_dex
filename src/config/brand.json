@@ -1,23 +1,23 @@
 {
   "brand": {
-    "name": "Raze.BOT",
-    "displayName": "RAZE.BOT",
-    "altText": "Raze Bundler",
-    "domain": "raze.bot",
-    "appUrl": "https://app.raze.bot",
-    "docsUrl": "https://docs.raze.bot",
-    "githubUrl": "https://github.com/razedotbot/solana-ui/",
-    "githubOrg": "https://github.com/Razedotbot",
+    "name": "JewLiquid",
+    "displayName": "JEWLIQUID",
+    "altText": "JewLiquid SPOT DEX",
+    "domain": "jewliquid.fun",
+    "appUrl": "https://spotjewliquid.xyz",
+    "docsUrl": "https://jewliquid.fun",
+    "githubUrl": "https://github.com/MoneyDoubler-Finance/jewliquid_spot_dex/",
+    "githubOrg": "https://github.com/MoneyDoubler-Finance",
     "social": {
-      "twitter": "@razedotbot",
-      "github": "razedotbot"
+      "twitter": "@jewliquid",
+      "github": "MoneyDoubler-Finance"
     },
     "seo": {
       "title": "JewLiquid - SPOT DEX",
-      "ogTitle": "Dominate Every Trading Opportunity - raze.bot",
-      "description": "raze Tools Empowers You with Professional Tools for Maximum Market Impact",
-      "ogImage": "https://raze.bot/images/bannermeta.jpg",
-      "twitterImage": "https://raze.bot/images/bannermeta.png"
+      "ogTitle": "JewLiquid - SPOT DEX",
+      "description": "Dual citizenship, but for your money. Professional trading tools for Solana DEX.",
+      "ogImage": "/src/pumpjewlogofull.png",
+      "twitterImage": "/src/pumpjewlogofull.png"
     },
     "favicon": {
       "baseUrl": "/src/pumpjewlogofull.png",
