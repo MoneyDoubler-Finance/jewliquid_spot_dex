@@ -478,8 +478,8 @@ export const ChartPage: React.FC<ChartPageProps> = ({
   const renderFrame = (hasToken: boolean = true) => {
     const frameTheme = brand.theme.frameName || brand.theme.name;
     const iframeSrc = hasToken 
-      ? `http://localhost:4200/?tokenMint=${tokenAddress}&theme=${frameTheme}`
-      : `http://localhost:4200/?theme=${frameTheme}`;
+      ? `https://frame.fury.bot/?tokenMint=${tokenAddress}&theme=${frameTheme}`
+      : `https://frame.fury.bot/?theme=${frameTheme}`;
     
     return (
       <div className="relative flex-1 overflow-hidden iframe-container">

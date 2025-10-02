@@ -21,15 +21,15 @@
     },
     "favicon": {
       "baseUrl": "/src/pumpjewlogofull.png",
-      "themeColor": "#00d5ff",
-      "tileColor": "#00d5ff"
+      "themeColor": "#00FFFF",
+      "tileColor": "#00FFFF"
     },
     "api": {
       "key": "9e5df81803be1e58888249911b96c3fb0bad01c2621fab5a54eb5c908313a646"
     },
     "theme": {
-      "name": "aqua",
-      "frameName": "green"
+      "name": "cyan",
+      "frameName": "cyan"
     }
   }
 }
