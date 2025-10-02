@@ -509,8 +509,8 @@ export const ActionsPage: React.FC<ActionsPageProps> = ({
             className="absolute inset-0"
             style={{
               backgroundImage: `
-                linear-gradient(rgba(2, 179, 109, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(2, 179, 109, 0.05) 1px, transparent 1px)
+                linear-gradient(var(--color-primary-05) 1px, transparent 1px),
+                linear-gradient(90deg, var(--color-primary-05) 1px, transparent 1px)
               `,
               backgroundSize: '20px 20px',
               backgroundPosition: 'center center',

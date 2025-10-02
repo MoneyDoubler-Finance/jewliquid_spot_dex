@@ -405,7 +405,7 @@ export const PnlModal: React.FC<PnlModalProps> = ({
         </div>
 
         {/* Content */}
-        <div className="relative z-10 p-5 space-y-5 max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#02b36d40] scrollbar-track-app-tertiary">
+        <div className="relative z-10 p-5 space-y-5 max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#00d5ff40] scrollbar-track-app-tertiary">
           <form onSubmit={(e) => e.preventDefault()}>
             {/* Step 1: Select Wallets */}
             {currentStep === 0 && (
@@ -486,7 +486,7 @@ export const PnlModal: React.FC<PnlModalProps> = ({
 
                 {/* Wallet Selection */}
                 <div className="bg-app-tertiary rounded-lg overflow-hidden border border-app-primary-20 shadow-inner transition-all duration-200 hover-border-primary-40">
-                  <div className="max-h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-[#02b36d40] scrollbar-track-app-tertiary">
+                  <div className="max-h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-[#00d5ff40] scrollbar-track-app-tertiary">
                     {filterWallets(wallets, searchTerm).length > 0 ? (
                       filterWallets(wallets, searchTerm).map((wallet) => (
                         <div 

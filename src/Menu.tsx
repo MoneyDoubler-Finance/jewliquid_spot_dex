@@ -239,7 +239,7 @@ const ServiceSelector = () => {
                     }}
                   >
                     <CyberpunkServiceButton 
-                      icon={<div className="bg-[#10B981] rounded-lg w-8 h-8 flex items-center justify-center">
+                      icon={<div className="bg-[#00d5ff] rounded-lg w-8 h-8 flex items-center justify-center">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FFFFFF" strokeWidth="2">
                           <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" strokeLinecap="round" strokeLinejoin="round"/>
                           <circle cx="12" cy="12" r="1" fill="#FFFFFF"/>
