@@ -3,7 +3,7 @@
     "short_name": "JewLiquid",
     "display": "standalone",
     "orientation": "portrait",
-    "theme_color": "#10B981",
+    "theme_color": "#00d5ff",
     "background_color": "#041726",
     "start_url": "/",
     "icons": [
