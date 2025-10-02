@@ -11,11 +11,13 @@ import { brand } from './config/brandConfig';
 // Dynamic CSS loading based on brand configuration using Vite's import
 const loadBrandCSS = async () => {
   try {
-    // Use dynamic import for CSS files in Vite based on theme name
-    await import(`./styles/${brand.theme.name}.css`);
+    // Resolve theme file name; map "aqua" to existing green.css to avoid duplication
+    const requestedTheme = brand.theme.name || 'green';
+    const resolvedThemeFile = requestedTheme === 'aqua' ? 'green' : requestedTheme;
+    await import(`./styles/${resolvedThemeFile}.css`);
   } catch (error) {
     console.error('Failed to load brand CSS:', error);
-    // Fallback to globals.css
+    // Fallback to default theme
     await import('./styles/green.css');
   }
 };
